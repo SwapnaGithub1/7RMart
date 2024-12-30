@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.AdminPage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
@@ -22,7 +23,7 @@ public class AdminTest extends Base {
 		admin.adminuser();
 		admin.newUser();
 		admin.save();
-		Assert.assertTrue(admin.alertdisplayed());
+		Assert.assertTrue(admin.alertdisplayed(),Constants.AdmnNewUser);
 	}
 
 }

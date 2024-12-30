@@ -11,6 +11,7 @@ import utilities.ExcelUtility;
 public class HomePageTest extends Base {
 
 	HomePage homepage;
+	LoginPage login;
 
 	@Test
 	public void checkWhetherLogoutisWorking() throws IOException {
@@ -23,4 +24,5 @@ public class HomePageTest extends Base {
 		homepage.homepage().logout();
 
 	}
+
 }

@@ -32,6 +32,8 @@ public class HomePage {
 	private WebElement more;
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-footertext']//i[@class='fas fa-arrow-circle-right']")
 	private WebElement footermoreinfo;
+	@FindBy(xpath = "(//input[@id='username'])[1]")
+	private WebElement Unamefield;
 
 	public SubCategoryPage subCatmorenfo() {
 		subcatmoreinfo.click();
@@ -54,8 +56,7 @@ public class HomePage {
 	}
 
 	public ManageContactPage managecont() {
-		// PageUtility pageutility = new PageUtility();
-		// pageutility.jsExecuterClick(more, driver);
+
 		more.click();
 		return new ManageContactPage(driver);
 	}
@@ -70,6 +71,11 @@ public class HomePage {
 	public HomePage homepage() {
 		adminbut.click();
 		return this;
+	}
+
+	public LoginPage logoutdisplayed() {
+		Unamefield.isDisplayed();
+		return new LoginPage(driver);
 	}
 
 }

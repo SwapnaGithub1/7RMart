@@ -17,7 +17,7 @@ public class LoginTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).signin();
 		boolean isHomepageavailable = loginpage.isHomePageloaded();
-		Assert.assertTrue(isHomepageavailable);
+		Assert.assertTrue(isHomepageavailable,Constants.ValidLognalert);
 	}
 
 	@Test
@@ -29,7 +29,7 @@ public class LoginTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).signin();
 		boolean isalertavailable = loginpage.isAlertDisplayed();
-		Assert.assertTrue(isalertavailable);
+		Assert.assertTrue(isalertavailable, Constants. InvalidPassword );
 
 	}
 
@@ -42,7 +42,7 @@ public class LoginTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue).signin();
 		boolean isalertavailable = loginpage.isAlertDisplayed();
-		Assert.assertTrue(isalertavailable);
+		Assert.assertTrue(isalertavailable,Constants. InvalidUsername);
 
 	}
 
