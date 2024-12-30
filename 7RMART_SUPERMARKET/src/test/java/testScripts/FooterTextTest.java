@@ -16,7 +16,7 @@ public class FooterTextTest extends Base {
 	FooterTextPage footertextPage;
 	HomePage homepage;
 
-	@Test
+	@Test(groups = {"Regression" })
 	public void checkWhetherisUppdateFooterTextworking() throws IOException {
 		FakerUtility fakerutility = new FakerUtility();
 

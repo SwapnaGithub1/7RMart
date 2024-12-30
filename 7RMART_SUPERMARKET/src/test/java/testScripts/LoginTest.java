@@ -10,7 +10,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
-	@Test(description = "Verify whether the user is able to login with correct credentials", retryAnalyzer = retry.Retry.class)
+	@Test(description = "Verify whether the user is able to login with correct credentials", retryAnalyzer = retry.Retry.class, groups = {"Regression" })
 	public void verifyLoginWithValidCredentials() throws IOException {
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");

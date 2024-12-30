@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class ManageContactPage {
 
@@ -36,8 +37,11 @@ public class ManageContactPage {
 	private WebElement alert;
 
 	public ManageContactPage newButton() {
+		WaitUtility waitutility=new WaitUtility();
+		waitutility.waitForElement(driver,newbut);
 		PageUtility pu = new PageUtility();
 		pu.jsExecuterClick(newbut, driver);
+		
 		// newbut.click();
 		return this;
 	}

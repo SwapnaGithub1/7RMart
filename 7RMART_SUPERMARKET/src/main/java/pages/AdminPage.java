@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class AdminPage {
 	WebDriver driver;
@@ -33,6 +34,8 @@ public class AdminPage {
 
 	public void adminuser() {
 		admnbutton.click();
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.waitForElementToBeClickable(driver, newBut);
 		newBut.click();
 	}
 
