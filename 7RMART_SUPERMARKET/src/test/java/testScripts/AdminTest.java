@@ -20,10 +20,10 @@ public class AdminTest extends Base {
 		login.enterPassword(passwordvalue);
 		login.signin();
 		AdminPage admin = new AdminPage(driver);
-		admin.adminuser();
+		admin.adminUser();
 		admin.newUser();
 		admin.save();
-		Assert.assertTrue(admin.alertdisplayed(),Constants.AdmnNewUser);
+		Assert.assertTrue(admin.isAlertdisplayed(),Constants.AdmnNewUser);
 	}
 
 }

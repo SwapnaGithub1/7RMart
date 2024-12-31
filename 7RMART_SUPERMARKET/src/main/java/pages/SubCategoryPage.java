@@ -83,7 +83,7 @@ public class SubCategoryPage {
 		return this;
 	}
 
-	public void alertAccept() {
+	public void isalertAccept() {
 		PageUtility pu = new PageUtility();
 		pu.simpleAlert(driver);
 	}

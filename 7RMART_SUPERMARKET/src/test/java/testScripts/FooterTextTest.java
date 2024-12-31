@@ -31,7 +31,7 @@ public class FooterTextTest extends Base {
 		homepage = login.signin();
 		footertextPage = homepage.footerText();
 		footertextPage.update().entername(Institutionname).entermail(mail).enterno(no).update1();
-		boolean alert = footertextPage.isalrtispresent();
+		boolean alert = footertextPage.isAlertPresent();
 		Assert.assertTrue(alert, Constants.FooterTextPageAssert);
 	}
 
@@ -44,7 +44,7 @@ public class FooterTextTest extends Base {
 		login.enterPassword(passwordvalue);
 		homepage = login.signin();
 		footertextPage = homepage.footerText();
-		boolean newbuttonavailable = footertextPage.udateavailable();
+		boolean newbuttonavailable = footertextPage.updateAvailable();
 		Assert.assertTrue(newbuttonavailable, Constants.FooterTextupdatebuttonAssert);
 	}
 }

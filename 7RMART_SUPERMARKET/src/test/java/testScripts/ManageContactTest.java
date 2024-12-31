@@ -27,11 +27,11 @@ public class ManageContactTest extends Base {
 		String rate = ExcelUtility.getIntegerData(4, 0, "ManageContactPage");
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homePage = loginpage.signin();
-		managecontactpage = homePage.managecont();
+		managecontactpage = homePage.manageContact();
 		managecontactpage.newButton().enterMail(mail).enterMobno(Mno).enterPlace(place).enterTime(time).enterRate(rate)
 				.update();
 
-		Assert.assertTrue(managecontactpage.alertdiplayed(), Constants.ManageContactAssert);
+		Assert.assertTrue(managecontactpage.isalertdiplayed(), Constants.ManageContactAssert);
 
 	}
 }

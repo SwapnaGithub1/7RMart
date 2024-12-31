@@ -55,7 +55,7 @@ public class HomePage {
 		return new FooterTextPage(driver);
 	}
 
-	public ManageContactPage managecont() {
+	public ManageContactPage manageContact() {
 
 		more.click();
 		return new ManageContactPage(driver);
@@ -73,7 +73,7 @@ public class HomePage {
 		return this;
 	}
 
-	public LoginPage logoutdisplayed() {
+	public LoginPage islogoutDisplayed() {
 		Unamefield.isDisplayed();
 		return new LoginPage(driver);
 	}

@@ -58,11 +58,11 @@ public class FooterTextPage {
 		return this;
 	}
 
-	public boolean udateavailable() {
+	public boolean updateAvailable() {
 		return updatebutton.isDisplayed();
 	}
 
-	public boolean isalrtispresent() {
+	public boolean isAlertPresent() {
 		return alert.isDisplayed();
 	}
 

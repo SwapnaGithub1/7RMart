@@ -28,11 +28,11 @@ public class AdminPage {
 	private WebElement field3;
 	@FindBy(xpath = "(//button[@name='Create'])[1]")
 	private WebElement savebutt;
-	// @FindBy(xpath="")private WebElement
+	
 	@FindBy(xpath = "(//div[@class='alert alert-danger alert-dismissible'])[1]")
 	private WebElement alert;
 
-	public void adminuser() {
+	public void adminUser() {
 		admnbutton.click();
 		WaitUtility waitutility = new WaitUtility();
 		waitutility.waitForElementToBeClickable(driver, newBut);
@@ -50,7 +50,7 @@ public class AdminPage {
 		savebutt.click();
 	}
 
-	public boolean alertdisplayed() {
+	public boolean isAlertdisplayed() {
 
 		return alert.isDisplayed();
 

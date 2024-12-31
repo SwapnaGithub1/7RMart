@@ -39,8 +39,8 @@ public class ManageContactPage {
 	public ManageContactPage newButton() {
 		WaitUtility waitutility=new WaitUtility();
 		waitutility.waitForElement(driver,newbut);
-		PageUtility pu = new PageUtility();
-		pu.jsExecuterClick(newbut, driver);
+		PageUtility pageutility = new PageUtility();
+		pageutility.jsExecuterClick(newbut, driver);
 		
 		// newbut.click();
 		return this;
@@ -83,7 +83,7 @@ public class ManageContactPage {
 		return this;
 	}
 
-	public boolean alertdiplayed() {
+	public boolean isalertdiplayed() {
 		return alert.isDisplayed();
 	}
 

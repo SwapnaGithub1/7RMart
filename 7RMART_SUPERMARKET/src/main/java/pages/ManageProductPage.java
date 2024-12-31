@@ -40,15 +40,10 @@ public class ManageProductPage {
 
 	}
 
-	public String alertPresent() {
+	public String isAlertPresent() {
 		return driver.switchTo().alert().getText();
 
 	}
-	/*
-	 * public void alertok() throws InterruptedException { WaitUtility wu = new
-	 * WaitUtility();
-	 * 
-	 * wu.wait(2); PageUtility pu = new PageUtility(); pu.simpleAlert(driver); }
-	 */
+	
 
 }

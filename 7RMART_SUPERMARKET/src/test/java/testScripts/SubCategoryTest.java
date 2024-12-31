@@ -28,6 +28,7 @@ public class SubCategoryTest extends Base {
 		boolean isalertavailable = subcatpage.isAlertDisplayed();
 		Assert.assertTrue(isalertavailable);
 		subcatpage.deleteCat();
+		// add assertion 
 
 	}
 
@@ -40,7 +41,8 @@ public class SubCategoryTest extends Base {
 		login.enterPassword(passwordvalue);
 		homepage = login.signin();
 		subcatpage = homepage.subCatmorenfo();
-		subcatpage.deleteCat().alertAccept();
+		subcatpage.deleteCat().isalertAccept(); 
+		//add assertion
 
 	}
 }

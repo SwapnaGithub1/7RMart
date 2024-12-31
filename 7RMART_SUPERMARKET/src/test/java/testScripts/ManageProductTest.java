@@ -25,9 +25,9 @@ public class ManageProductTest extends Base {
 		homepae = loginpage.signin();
 		manageprodpage = homepae.manageproduct();
 		manageprodpage.newItem().enterData(prod).save();
-		String expctd = "Please enter weight price";
-		String a = manageprodpage.alertPresent();
-		Assert.assertEquals(a, expctd, Constants.ManageProdAssert);
+		String expctd = "Please enter weight price"; //read from excel
+		String actual = manageprodpage.isAlertPresent();
+		Assert.assertEquals(actual, expctd, Constants.ManageProdAssert);
 
 	}
 }
