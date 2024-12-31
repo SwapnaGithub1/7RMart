@@ -7,7 +7,7 @@
         <methods>
           <include name="browserQuit"/>
           <include name="intializeBrowser"/>
-          <include name="VerifytoAddNewSubCategory"/>
+          <include name="checktoDeleteItem"/>
         </methods>
       </class> <!-- testScripts.SubCategoryTest -->
     </classes>
