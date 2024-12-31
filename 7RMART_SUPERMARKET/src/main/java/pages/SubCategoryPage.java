@@ -36,11 +36,6 @@ public class SubCategoryPage {
 	@FindBy(xpath = "//body[1]/div[1]/div[1]/section[1]/div[4]/div[2]/table[1]/tbody[1]/tr[1]/td[5]/a[2]/i[1]")
 	private WebElement delbut;
 
-	public void subCatmorenfo1() {
-		subcatmoreinfo.click();
-
-	}
-
 	public SubCategoryPage newButton() {
 		newbutton.click();
 		return this;
@@ -53,23 +48,19 @@ public class SubCategoryPage {
 		return this;
 	}
 
-	public SubCategoryPage SubcatInput(String Catname) {
-		textsub.sendKeys(Catname);
+	public SubCategoryPage InputCategoryName(String CategoryName) {
+		textsub.sendKeys(CategoryName);
 		return this;
 	}
 
-	public SubCategoryPage imageupload() throws AWTException {
+	public SubCategoryPage prodImageUpload() throws AWTException {
 		FileUploadUtilities fileutility = new FileUploadUtilities();
 		fileutility.fileuploadRobotClass(uploadbutton, Constants.ImageBall);
 		return this;
 	}
 
-	public SubCategoryPage imageupload1() {
-		uploadbutton.sendKeys(Constants.ImageBall);
-		return this;
-	}
 
-	public SubCategoryPage save() {
+	public SubCategoryPage saveButton() {
 		savebutton.click();
 		return this;
 	}
@@ -78,7 +69,7 @@ public class SubCategoryPage {
 		return alert.isDisplayed();
 	}
 
-	public SubCategoryPage deleteCat() {
+	public SubCategoryPage deleteCategory() {
 		delbut.click();
 		return this;
 	}

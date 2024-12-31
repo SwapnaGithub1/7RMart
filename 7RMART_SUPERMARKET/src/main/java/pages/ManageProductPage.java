@@ -28,12 +28,12 @@ public class ManageProductPage {
 		return this;
 	}
 
-	public ManageProductPage enterData(String prod) {
-		Tfield.sendKeys(prod);
+	public ManageProductPage enterData(String product) {
+		Tfield.sendKeys(product);
 		return this;
 	}
 
-	public ManageProductPage save() {
+	public ManageProductPage saveButton() {
 		PageUtility pu = new PageUtility();
 		pu.jsExecuterClick(savebut, driver);
 		return this;

@@ -46,7 +46,7 @@ public class Base {
 			throw new Exception("browser is not correct");
 		}
 		driver.get(properties.getProperty("url"));
-		
+
 		driver.manage().window().maximize();
 	}
 

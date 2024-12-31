@@ -29,31 +29,31 @@ public class FooterTextPage {
 	@FindBy(xpath = "//h5[normalize-space()='Alert!']")
 	private WebElement alert;
 
-	public FooterTextPage update() {
+	public FooterTextPage updateButton() {
 		updatebutton.click();
 		return this;
 	}
 
-	public FooterTextPage entername(String name) {
+	public FooterTextPage enterName(String name) {
 		textfield1.clear();
 		textfield1.sendKeys(name);
 		return this;
 
 	}
 
-	public FooterTextPage entermail(String mail) {
+	public FooterTextPage enterMailAddress(String mail) {
 		textField2.clear();
 		textField2.sendKeys(mail);
 		return this;
 	}
 
-	public FooterTextPage enterno(String no) {
+	public FooterTextPage enterContactNo(String no) {
 		textfield3.clear();
 		textfield3.sendKeys(no);
 		return this;
 	}
 
-	public FooterTextPage update1() {
+	public FooterTextPage saveUpdateButton() {
 		updatebut.click();
 		return this;
 	}

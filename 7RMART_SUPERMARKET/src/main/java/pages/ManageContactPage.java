@@ -37,25 +37,25 @@ public class ManageContactPage {
 	private WebElement alert;
 
 	public ManageContactPage newButton() {
-		WaitUtility waitutility=new WaitUtility();
-		waitutility.waitForElement(driver,newbut);
+		WaitUtility waitutility = new WaitUtility();
+		waitutility.waitForElement(driver, newbut);
 		PageUtility pageutility = new PageUtility();
 		pageutility.jsExecuterClick(newbut, driver);
-		
+
 		// newbut.click();
 		return this;
 	}
 
-	public ManageContactPage enterMobno(String Mno) {
+	public ManageContactPage enterMobNo(String MobileNo) {
 		TField1.clear();
-		TField1.sendKeys(Mno);
+		TField1.sendKeys(MobileNo);
 		return this;
 	}
 
-	public ManageContactPage enterMail(String mail) {
+	public ManageContactPage enterMailAddress(String email) {
 
 		TField2.clear();
-		TField2.sendKeys(mail);
+		TField2.sendKeys(email);
 		return this;
 	}
 
@@ -77,13 +77,13 @@ public class ManageContactPage {
 		return this;
 	}
 
-	public ManageContactPage update() {
+	public ManageContactPage updateButton() {
 		PageUtility pu = new PageUtility();
 		pu.jsExecuterClick(updatbutton, driver);
 		return this;
 	}
 
-	public boolean isalertdiplayed() {
+	public boolean isAlertDisplayed() {
 		return alert.isDisplayed();
 	}
 

@@ -28,10 +28,10 @@ public class ManageContactTest extends Base {
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homePage = loginpage.signin();
 		managecontactpage = homePage.manageContact();
-		managecontactpage.newButton().enterMail(mail).enterMobno(Mno).enterPlace(place).enterTime(time).enterRate(rate)
-				.update();
+		managecontactpage.newButton().enterMailAddress(mail).enterMobNo(Mno).enterPlace(place).enterTime(time).enterRate(rate)
+				.updateButton();
 
-		Assert.assertTrue(managecontactpage.isalertdiplayed(), Constants.ManageContactAssert);
+		Assert.assertTrue(managecontactpage.isAlertDisplayed(), Constants.ManageContactAssert);
 
 	}
 }

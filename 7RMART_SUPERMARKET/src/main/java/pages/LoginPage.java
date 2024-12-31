@@ -25,15 +25,15 @@ public class LoginPage {
 	@FindBy(xpath = "//div[@class='alert alert-danger alert-dismissible']")
 	private WebElement alert;
 
-	public LoginPage enterUsername(String uname) {
+	public LoginPage enterUsername(String UserName) {
 
-		username.sendKeys(uname);
+		username.sendKeys(UserName);
 		return this;
 
 	}
 
-	public LoginPage enterPassword(String Pswd) {
-		pswd.sendKeys(Pswd);
+	public LoginPage enterPassword(String Password) {
+		pswd.sendKeys(Password);
 		return this;
 	}
 

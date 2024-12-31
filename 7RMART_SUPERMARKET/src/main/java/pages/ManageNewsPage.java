@@ -13,8 +13,6 @@ public class ManageNewsPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	// @FindBy(xpath="(//i[@class='fas fa-arrow-circle-right'])[9]") private
-	// WebElement managenewsmoreinfo;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-danger']")
 	private WebElement newButton;
 	@FindBy(xpath = "//textarea[@id='news']")
@@ -34,12 +32,12 @@ public class ManageNewsPage {
 		return this;
 	}
 
-	public ManageNewsPage save() {
+	public ManageNewsPage saveButton() {
 		savebutton.click();
 		return this;
 	}
 
-	public boolean isalertdisplayed() {
+	public boolean isAlertDisplayed() {
 		return alert.isDisplayed();
 	}
 

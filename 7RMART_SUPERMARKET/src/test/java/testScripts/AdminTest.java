@@ -7,23 +7,24 @@ import org.testng.annotations.Test;
 
 import constants.Constants;
 import pages.AdminPage;
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class AdminTest extends Base {
+	AdminPage adminpage;
+	HomePage homepage;
+
 	@Test
-	public void checkAdminLoginisWrking() throws IOException {
+	public void checkwhetherAddingNewUserTOAdminLoginIsWorking() throws IOException {
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsername(usernamevalue);
-		login.enterPassword(passwordvalue);
-		login.signin();
-		AdminPage admin = new AdminPage(driver);
-		admin.adminUser();
-		admin.newUser();
-		admin.save();
-		Assert.assertTrue(admin.isAlertdisplayed(),Constants.AdmnNewUser);
+		login.enterUsername(usernamevalue).enterPassword(passwordvalue);
+		homepage = login.signin();
+		adminpage = homepage.adminMoreinfo();
+		adminpage.adminUser().newUserName().newPassword().saveButton();
+		Assert.assertTrue(adminpage.isAlertDisplayed(), Constants.AdmnNewUser);
 	}
 
 }

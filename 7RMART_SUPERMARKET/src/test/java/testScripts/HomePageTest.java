@@ -22,7 +22,7 @@ public class HomePageTest extends Base {
 		login.enterPassword(passwordvalue);
 		homepage = login.signin();
 		homepage.homepage().logout();
-
+		// Assert.assertTrue(homepage.islogoutDisplayed(),Constants.LogotnotWrking);
 	}
 
 }

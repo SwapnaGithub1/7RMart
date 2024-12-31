@@ -15,7 +15,7 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	// @FindBy(xpath="")private WebElement
+	 @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']//i[@class='fas fa-arrow-circle-right']")private WebElement admnmoreinfo;
 	@FindBy(xpath = "(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category'][normalize-space()='More info'])[1]")
 	private WebElement subcatmoreinfo;
 	@FindBy(xpath = "(//i[@class='fas fa-arrow-circle-right'])[8]")
@@ -34,7 +34,13 @@ public class HomePage {
 	private WebElement footermoreinfo;
 	@FindBy(xpath = "(//input[@id='username'])[1]")
 	private WebElement Unamefield;
-
+	@FindBy(xpath = "//input[@placeholder='Username']")
+	private WebElement username;
+	public AdminPage adminMoreinfo()
+	{
+		admnmoreinfo.click();
+		return new AdminPage(driver);
+	}
 	public SubCategoryPage subCatmorenfo() {
 		subcatmoreinfo.click();
 		return new SubCategoryPage(driver);
@@ -74,7 +80,7 @@ public class HomePage {
 	}
 
 	public LoginPage islogoutDisplayed() {
-		Unamefield.isDisplayed();
+		username.isDisplayed();
 		return new LoginPage(driver);
 	}
 

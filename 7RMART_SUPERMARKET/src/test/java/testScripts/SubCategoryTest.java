@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.SubCategoryPage;
@@ -24,12 +25,9 @@ public class SubCategoryTest extends Base {
 		homepage = login.signin();
 		subcatpage = homepage.subCatmorenfo();
 		String input = ExcelUtility.getStringData(0, 0, "SubCategoryPage");
-		subcatpage.newButton().selectCategory().SubcatInput(input).imageupload().save();
+		subcatpage.newButton().selectCategory().InputCategoryName(input).prodImageUpload().saveButton();
 		boolean isalertavailable = subcatpage.isAlertDisplayed();
-		Assert.assertTrue(isalertavailable);
-		subcatpage.deleteCat();
-		// add assertion 
-
+		Assert.assertTrue(isalertavailable, Constants.SubCategoryPage);
 	}
 
 	@Test
@@ -41,8 +39,8 @@ public class SubCategoryTest extends Base {
 		login.enterPassword(passwordvalue);
 		homepage = login.signin();
 		subcatpage = homepage.subCatmorenfo();
-		subcatpage.deleteCat().isalertAccept(); 
-		//add assertion
+		subcatpage.deleteCategory().isalertAccept();
+		// add assertion
 
 	}
 }

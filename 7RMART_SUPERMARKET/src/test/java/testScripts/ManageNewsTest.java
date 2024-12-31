@@ -24,7 +24,7 @@ public class ManageNewsTest extends Base {
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homepage = loginpage.signin();
 		managenws = homepage.moreInfo();
-		managenws.newButon().textField(news).save();
-		Assert.assertTrue(managenws.isalertdisplayed(), Constants.ManageNewsAssert);
+		managenws.newButon().textField(news).saveButton();
+		Assert.assertTrue(managenws.isAlertDisplayed(), Constants.ManageNewsAssert);
 	}
 }

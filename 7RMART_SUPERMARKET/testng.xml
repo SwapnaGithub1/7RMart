@@ -6,9 +6,9 @@
 </listeners>
   <test  name="Test">
     <classes>
-      <class name="testScripts.ManageNewsTest">
+      <class name="testScripts.FooterTextTest">
       <methods>
-      <include name="verifyAddnNewManageNews"></include>
+      <include name="checkWhetherUppdateFooterTextIsworking"></include>
       </methods>
      </class>
     </classes>

@@ -16,7 +16,7 @@ public class ManageProductTest extends Base {
 	HomePage homepae;
 
 	@Test
-	public void checkWhetherAlertisPresentWhenanyFieldLeftEmpty() throws IOException, InterruptedException {
+	public void checkWhetherAlertisPresentWhenAnyFieldLeftEmpty() throws IOException, InterruptedException {
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		String prod = ExcelUtility.getStringData(0, 0, "ManageProductPage");
@@ -24,8 +24,8 @@ public class ManageProductTest extends Base {
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homepae = loginpage.signin();
 		manageprodpage = homepae.manageproduct();
-		manageprodpage.newItem().enterData(prod).save();
-		String expctd = "Please enter weight price"; //read from excel
+		manageprodpage.newItem().enterData(prod).saveButton();
+		String expctd = ExcelUtility.getStringData(1, 0, "ManageProductPage");
 		String actual = manageprodpage.isAlertPresent();
 		Assert.assertEquals(actual, expctd, Constants.ManageProdAssert);
 

@@ -16,4 +16,6 @@ public class Constants {
 	public static final String AdmnNewUser = "New User for Admin not added";
 	public static final String InvalidUsername = "Loggin not successfull, Username is wrong";
 	public static final String LogotnotWrking = "Logout is not Working properly";
+	public static final String SubCategoryPage = "Subcategory not updated successfully";
+	public static final String SubCategoryPageAlert ="subcategory Item deleted Alert is not present"; 
 }

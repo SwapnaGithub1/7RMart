@@ -28,29 +28,40 @@ public class AdminPage {
 	private WebElement field3;
 	@FindBy(xpath = "(//button[@name='Create'])[1]")
 	private WebElement savebutt;
-	
+
 	@FindBy(xpath = "(//div[@class='alert alert-danger alert-dismissible'])[1]")
 	private WebElement alert;
 
-	public void adminUser() {
+	public AdminPage adminUser() {
 		admnbutton.click();
 		WaitUtility waitutility = new WaitUtility();
 		waitutility.waitForElementToBeClickable(driver, newBut);
 		newBut.click();
+		return this;
 	}
 
-	public void newUser() {
+	public AdminPage newUserName() {
 		field1.sendKeys("admin");
+		return this;
+	}
+
+	public AdminPage newPassword() {
 		field2.sendKeys("1234");
+		return this;
+	}
+
+	public AdminPage radioButton() {
 		PageUtility pu = new PageUtility();
 		pu.selectByIndex(field3, 2);
+		return this;
 	}
 
-	public void save() {
+	public AdminPage saveButton() {
 		savebutt.click();
+		return this;
 	}
 
-	public boolean isAlertdisplayed() {
+	public boolean isAlertDisplayed() {
 
 		return alert.isDisplayed();
 

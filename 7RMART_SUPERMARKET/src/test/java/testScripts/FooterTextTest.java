@@ -16,10 +16,9 @@ public class FooterTextTest extends Base {
 	FooterTextPage footertextPage;
 	HomePage homepage;
 
-	@Test(groups = {"Regression" })
-	public void checkWhetherisUppdateFooterTextworking() throws IOException {
+	@Test(groups = { "Regression" })
+	public void checkWhetherUppdateFooterTextIsworking() throws IOException {
 		FakerUtility fakerutility = new FakerUtility();
-
 		String usernamevalue = ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordvalue = ExcelUtility.getStringData(1, 1, "LoginPage");
 		// String name=ExcelUtility.getStringData(0, 0,"FooterTextPage");
@@ -30,7 +29,8 @@ public class FooterTextTest extends Base {
 		login.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homepage = login.signin();
 		footertextPage = homepage.footerText();
-		footertextPage.update().entername(Institutionname).entermail(mail).enterno(no).update1();
+		footertextPage.updateButton().enterName(Institutionname).enterMailAddress(mail).enterContactNo(no)
+				.saveUpdateButton();
 		boolean alert = footertextPage.isAlertPresent();
 		Assert.assertTrue(alert, Constants.FooterTextPageAssert);
 	}
