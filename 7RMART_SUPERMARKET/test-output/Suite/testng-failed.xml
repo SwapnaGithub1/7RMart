@@ -7,12 +7,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testScripts.ManageContactTest">
+      <class name="testScripts.SubCategoryTest">
         <methods>
+          <include name="browserQuit"/>
           <include name="intializeBrowser"/>
-          <include name="checkWhetherManageContactUpdateisWorking"/>
+          <include name="checktoDeleteItemInSubCategory"/>
         </methods>
-      </class> <!-- testScripts.ManageContactTest -->
+      </class> <!-- testScripts.SubCategoryTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

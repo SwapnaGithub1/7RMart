@@ -36,52 +36,52 @@ public class HomePage {
 	private WebElement Unamefield;
 	@FindBy(xpath = "//input[@placeholder='Username']")
 	private WebElement username;
-	public AdminPage adminMoreinfo()
+	public AdminPage clickAdminMoreinfo()
 	{
 		admnmoreinfo.click();
 		return new AdminPage(driver);
 	}
-	public SubCategoryPage subCatmorenfo() {
+	public SubCategoryPage clickSubCatMorenfo() {
 		subcatmoreinfo.click();
 		return new SubCategoryPage(driver);
 	}
 
-	public ManageProductPage manageproduct() {
+	public ManageProductPage clickManageProductMore() {
 		manaeprodmoreinfo.click();
 		return new ManageProductPage(driver);
 	}
 
-	public ManageNewsPage moreInfo() {
+	public ManageNewsPage clickManageNewsMoreInfo() {
 		managenewsmoreinfo.click();
 		return new ManageNewsPage(driver);
 	}
 
-	public FooterTextPage footerText() {
+	public FooterTextPage clickFooterTextMore() {
 		footermoreinfo.click();
 		return new FooterTextPage(driver);
 	}
 
-	public ManageContactPage manageContact() {
+	public ManageContactPage clickManageContactMore() {
 
 		more.click();
 		return new ManageContactPage(driver);
 	}
 
-	public LoginPage logout() {
+	public LoginPage clickLogoutButton() {
 
 		logoutbut.click();
 		return new LoginPage(driver);
 
 	}
 
-	public HomePage homepage() {
+	public HomePage clickHomepageMoreInfo() {
 		adminbut.click();
 		return this;
 	}
 
-	public LoginPage islogoutDisplayed() {
-		username.isDisplayed();
-		return new LoginPage(driver);
+	public boolean islogoutDisplayed() {
+		return username.isDisplayed();
 	}
+		
 
 }

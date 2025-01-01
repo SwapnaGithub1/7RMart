@@ -23,8 +23,8 @@ public class ManageProductTest extends Base {
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homepae = loginpage.signin();
-		manageprodpage = homepae.manageproduct();
-		manageprodpage.newItem().enterData(prod).saveButton();
+		manageprodpage = homepae.clickManageProductMore();
+		manageprodpage.clickNewItem().enterData(prod).clickSaveButton();
 		String expctd = ExcelUtility.getStringData(1, 0, "ManageProductPage");
 		String actual = manageprodpage.isAlertPresent();
 		Assert.assertEquals(actual, expctd, Constants.ManageProdAssert);

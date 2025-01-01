@@ -27,7 +27,7 @@ public class ManageContactTest extends Base {
 		String rate = ExcelUtility.getIntegerData(4, 0, "ManageContactPage");
 		loginpage.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homePage = loginpage.signin();
-		managecontactpage = homePage.manageContact();
+		managecontactpage = homePage.clickManageContactMore();
 		managecontactpage.newButton().enterMailAddress(mail).enterMobNo(Mno).enterPlace(place).enterTime(time).enterRate(rate)
 				.updateButton();
 

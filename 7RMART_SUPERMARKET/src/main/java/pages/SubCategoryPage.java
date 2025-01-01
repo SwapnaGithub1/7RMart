@@ -18,7 +18,7 @@ public class SubCategoryPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
+	@FindBy(xpath ="//tbody/tr[1]") private WebElement row;
 	@FindBy(xpath = "(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category'][normalize-space()='More info'])[1]")
 	private WebElement subcatmoreinfo;
 	@FindBy(xpath = "(//a[@class='btn btn-rounded btn-danger'])[1]")
@@ -35,8 +35,9 @@ public class SubCategoryPage {
 	private WebElement alert;
 	@FindBy(xpath = "//body[1]/div[1]/div[1]/section[1]/div[4]/div[2]/table[1]/tbody[1]/tr[1]/td[5]/a[2]/i[1]")
 	private WebElement delbut;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement allert1;
 
-	public SubCategoryPage newButton() {
+	public SubCategoryPage clickNewButton() {
 		newbutton.click();
 		return this;
 	}
@@ -60,7 +61,7 @@ public class SubCategoryPage {
 	}
 
 
-	public SubCategoryPage saveButton() {
+	public SubCategoryPage clickSaveButton() {
 		savebutton.click();
 		return this;
 	}
@@ -69,7 +70,8 @@ public class SubCategoryPage {
 		return alert.isDisplayed();
 	}
 
-	public SubCategoryPage deleteCategory() {
+	public SubCategoryPage clickDeleteCategory() {
+		 
 		delbut.click();
 		return this;
 	}
@@ -78,4 +80,8 @@ public class SubCategoryPage {
 		PageUtility pu = new PageUtility();
 		pu.simpleAlert(driver);
 	}
+    public boolean alertIsDisplayed() {
+    	return allert1.isDisplayed();
+    }
+    
 }

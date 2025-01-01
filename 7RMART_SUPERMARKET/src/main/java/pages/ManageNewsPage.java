@@ -22,7 +22,7 @@ public class ManageNewsPage {
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	private WebElement alert;
 
-	public ManageNewsPage newButon() {
+	public ManageNewsPage clickNewButon() {
 		newButton.click();
 		return this;
 	}
@@ -32,7 +32,7 @@ public class ManageNewsPage {
 		return this;
 	}
 
-	public ManageNewsPage saveButton() {
+	public ManageNewsPage clickSaveButton() {
 		savebutton.click();
 		return this;
 	}

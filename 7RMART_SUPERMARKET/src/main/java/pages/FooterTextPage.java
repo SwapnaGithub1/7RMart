@@ -29,7 +29,7 @@ public class FooterTextPage {
 	@FindBy(xpath = "//h5[normalize-space()='Alert!']")
 	private WebElement alert;
 
-	public FooterTextPage updateButton() {
+	public FooterTextPage clickUpdateButton() {
 		updatebutton.click();
 		return this;
 	}
@@ -53,7 +53,7 @@ public class FooterTextPage {
 		return this;
 	}
 
-	public FooterTextPage saveUpdateButton() {
+	public FooterTextPage clickSaveUpdateButton() {
 		updatebut.click();
 		return this;
 	}

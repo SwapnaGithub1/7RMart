@@ -22,8 +22,8 @@ public class AdminTest extends Base {
 		LoginPage login = new LoginPage(driver);
 		login.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homepage = login.signin();
-		adminpage = homepage.adminMoreinfo();
-		adminpage.adminUser().newUserName().newPassword().saveButton();
+		adminpage = homepage.clickAdminMoreinfo();
+		adminpage.adminUser().newUserName().newPassword().clickRadioButton().clickSaveButton();
 		Assert.assertTrue(adminpage.isAlertDisplayed(), Constants.AdmnNewUser);
 	}
 

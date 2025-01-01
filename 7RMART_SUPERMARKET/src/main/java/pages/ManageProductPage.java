@@ -23,7 +23,7 @@ public class ManageProductPage {
 	@FindBy(xpath = "//button[@class='btn btn-danger' and @type='submit']")
 	private WebElement savebut;
 
-	public ManageProductPage newItem() {
+	public ManageProductPage clickNewItem() {
 		newbut.click();
 		return this;
 	}
@@ -33,7 +33,7 @@ public class ManageProductPage {
 		return this;
 	}
 
-	public ManageProductPage saveButton() {
+	public ManageProductPage clickSaveButton() {
 		PageUtility pu = new PageUtility();
 		pu.jsExecuterClick(savebut, driver);
 		return this;

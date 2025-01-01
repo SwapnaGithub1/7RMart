@@ -6,9 +6,9 @@
 </listeners>
   <test  name="Test">
     <classes>
-      <class name="testScripts.FooterTextTest">
+      <class name="testScripts.SubCategoryTest">
       <methods>
-      <include name="checkWhetherUppdateFooterTextIsworking"></include>
+      <include name="checktoDeleteItemInSubCategory"></include>
       </methods>
      </class>
     </classes>

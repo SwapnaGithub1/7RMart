@@ -50,13 +50,13 @@ public class AdminPage {
 		return this;
 	}
 
-	public AdminPage radioButton() {
+	public AdminPage clickRadioButton() {
 		PageUtility pu = new PageUtility();
 		pu.selectByIndex(field3, 2);
 		return this;
 	}
 
-	public AdminPage saveButton() {
+	public AdminPage clickSaveButton() {
 		savebutt.click();
 		return this;
 	}

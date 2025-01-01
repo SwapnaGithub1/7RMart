@@ -28,9 +28,9 @@ public class FooterTextTest extends Base {
 		LoginPage login = new LoginPage(driver);
 		login.enterUsername(usernamevalue).enterPassword(passwordvalue);
 		homepage = login.signin();
-		footertextPage = homepage.footerText();
-		footertextPage.updateButton().enterName(Institutionname).enterMailAddress(mail).enterContactNo(no)
-				.saveUpdateButton();
+		footertextPage = homepage.clickFooterTextMore();
+		footertextPage.clickUpdateButton().enterName(Institutionname).enterMailAddress(mail).enterContactNo(no)
+				.clickSaveUpdateButton();
 		boolean alert = footertextPage.isAlertPresent();
 		Assert.assertTrue(alert, Constants.FooterTextPageAssert);
 	}
@@ -43,7 +43,7 @@ public class FooterTextTest extends Base {
 		login.enterUsername(usernamevalue);
 		login.enterPassword(passwordvalue);
 		homepage = login.signin();
-		footertextPage = homepage.footerText();
+		footertextPage = homepage.clickFooterTextMore();
 		boolean newbuttonavailable = footertextPage.updateAvailable();
 		Assert.assertTrue(newbuttonavailable, Constants.FooterTextupdatebuttonAssert);
 	}

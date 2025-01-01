@@ -2,8 +2,10 @@ package testScripts;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.LoginPage;
 import pages.HomePage;
 import utilities.ExcelUtility;
@@ -21,8 +23,8 @@ public class HomePageTest extends Base {
 		login.enterUsername(usernamevalue);
 		login.enterPassword(passwordvalue);
 		homepage = login.signin();
-		homepage.homepage().logout();
-		// Assert.assertTrue(homepage.islogoutDisplayed(),Constants.LogotnotWrking);
+		homepage.clickHomepageMoreInfo().clickLogoutButton();
+		Assert.assertTrue(homepage.islogoutDisplayed(),Constants.LogotnotWrking);
 	}
 
 }
